@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'flashnews/css/normalize.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'flashnews/css/grid.css' %}">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="{% static 'flashnews/css/index.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'flashnews/css/queries.css' %}">
+  <title>Flash News</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="row">
+        <img src="{% static 'flashnews/img/newslogo1.png'%}" alt="flash_logo" class="logo">
+        <img src="{% static 'flashnews/img/flash.png'%}" alt="flash_logo" class="logo-nav">
+        <ul class="main-nav js--main-nav">
+          <li>
+            <a href="#politics" class="js--scroll-to-politics">Politics</a>
+          </li>
+          <li>
+            <a href="#sports" class="js--scroll-to-sports">Sports</a>
+          </li>
+          <li>
+            <a href="#tech" class="js--scroll-to-tech">Tech</a>
+          </li>
+          <li>
+            <a class="js--scroll-to-subscription" href="#subscription">Sign Up</a>
+          </li>
+        </ul>
+        <a class="mobile-nav-icon js--nav-icon">
+          <i class="ion-navicon-round"></i>
+        </a>
+      </div>
+    </nav>
+    <div class="news-text-box">
+      <h1>Flash News
+        <br>Up-to-date news in single view.</h1>
+      <a class="btn btn-full js--scroll-to-latest" href="#">Flash it!</a>
+      <a class="btn btn-ghost js--scroll-to-subscription" href="#">Subscribe</a>
+    </div>
+  </header>
+
+  <section class="section-features">
+    <div class="row">
+      <h2>Get Updated &mdash; 365 Days</h2>
+      <p class="long-copy">Break the echo chamber! Topical news from a diverse variety of sources at your fingertips!</p>
+    </div>
+
+    <div class="row">
+      <div class="col span-1-of-4 box">
+        <i class="ion-earth icon-big"></i>
+        <h3>Updated News</h3>
+        <p>Elit laboris ut ipsum fugiat ea irure eiusmod non.Aute esse voluptate qui duis.Qui esse proident cupidatat esse anim
+          sint duis ad do officia officia duis.</p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-videocamera icon-big"></i>
+        <h3>Read Anything</h3>
+        <p>Elit laboris ut ipsum fugiat ea irure eiusmod non.Aute esse Voluptate officia dolor reprehenderit ullamco mollit
+          culpa do reprehenderit nulla culpa.voluptate qui duis.</p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-ios-monitor icon-big"></i>
+        <h3>various opinions</h3>
+        <p>Velit ad voluptate commodo eiusmod eiusmod aute fugiat culpa consectetur elit velit incididunt. Elit laboris ut ipsum
+          fugiat ea irure eiusmod non.Aute esse voluptate qui duis.</p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-ios-camera icon-big"></i>
+        <h3>Verified Sources</h3>
+        <p>Ullamco voluptate nostrud nisi eu mollit ea reprehenderit anim. Elit laboris ut ipsum fugiat ea irure eiusmod non.Aute
+          esse voluptate qui duis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pol_par js--politics">
+    <h1 style="font-size: 300%">Politics</h1>
+  </section>
+
+  <section class="sports" id="politics">
+    <div class="js--wp-9 politics-grid">
+      <div class="js--wp-10 sports1 polb" id="h">
+        <img src="{{Briet.0.urlToImage}}" alt="">
+        <a href="{{Briet.0.url}}" target="_blank">
+          <h3>{{Briet.0.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-right">Conservative View</p>
+        <p class="p-spacing">{{Briet.0.publishedAt}}</p>
+        <p>{{Briet.0.description}}</p>
+      </div>
+
+      <div class="sports1 polb js--wp-11">
+        <img src="{{Huff.0.urlToImage}}" />
+        <a href="{{Huff.0.url}}" target="_blank">
+          <h3>{{Huff.0.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-left">Liberal View</p>
+        <p class="p-spacing">{{Huff.0.publishedAt}}</p>
+        <p>{{Huff.0.description}}</p>
+      </div>
+
+      <div class="sports1 polb js--wp-12">
+        <img src="{{Briet.1.urlToImage}}" />
+        <a href="{{Briet.1.url}}" target="_blank">
+          <h3>{{Briet.1.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-right">Conservative View</p>
+        <p class="p-spacing">{{Briet.1.publishedAt}}</p>
+        <p>{{Briet.1.description}}</p>
+      </div>
+
+      <div class="sports1 polb js--wp-13">
+        <img src="{{Huff.1.urlToImage}}" />
+        <a href="{{Huff.1.url}}" target="_blank">
+          <h3>{{Huff.1.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-left">Liberal View</p>
+        <p class="p-spacing">{{Huff.1.publishedAt}}</p>
+        <p>{{Huff.1.description}}</p>
+      </div>
+
+      <div class="sports1 polb js--wp-14">
+        <img src="{{Briet.2.urlToImage}}" />
+        <a href="{{Briet.2.url}}" target="_blank">
+          <h3>{{Briet.2.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-right">Conservative View</p>
+        <p class="p-spacing">{{Briet.2.publishedAt}}</p>
+        <p>{{Briet.2.description}}</p>
+      </div>
+
+      <div class="sports1 polb js--wp-15">
+        <img src="{{Huff.2.urlToImage}}" />
+        <a href="{{Huff.2.url}}" target="_blank">
+          <h3>{{Huff.2.title}}
+            <br>
+          </h3>
+        </a>
+        <p class="p-left">Liberal View</p>
+        <p class="p-spacing">{{Huff.2.publishedAt}}</p>
+        <p>{{Huff.2.description}}</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="sports_par js--sports">
+    <h1 style="font-size: 300%">Sports</h1>
+  </section>
+
+  <section class="sports" id="sports_bcolor">
+    <div class="js--wp-3 sports-grid">
+      <div class="js--wp-4 sports1">
+        <img src="{{sportsBible.1.urlToImage}}" alt="">
+        <a href="{{sportsBible.1.url}}" target="_blank">
+          <h3>{{sportsBible.1.title}}
+            <br>
+          </h3>
+        </a>
+        <p>{{sportsBible.1.publishedAt}}</p>
+        <p>{{sportsBible.1.description}}</p>
+      </div>
+
+      <div class="js--wp-5 js--wp-6 sports1">
+        <img src="{{sportsBible.4.urlToImage}}" />
+        <a href="{{sportsBible.4.url}}" target="_blank">
+          <h3>{{sportsBible.4.title}}
+            <br>
+          </h3>
+        </a>
+        <p>{{sportsBible.4.publishedAt}}</p>
+        <p>{{sportsBible.4.description}}</p>
+      </div>
+
+      <div class="js--wp-7 sports1">
+        <img src="{{sportsBible.2.urlToImage}}" />
+        <a href="{{sportsBible.2.url}}" target="_blank">
+          <h3>{{sportsBible.2.title}}
+            <br>
+          </h3>
+        </a>
+        <p>{{sportsBible.2.publishedAt}}</p>
+        <p>{{sportsBible.2.description}}</p>
+      </div>
+
+      <div class="js--wp-8 sports1">
+        <img src="{{sportsBible.3.urlToImage}}" />
+        <a href="{{sportsBible.3.url}}" target="_blank">
+          <h3>{{sportsBible.3.title}}
+            <br>
+          </h3>
+        </a>
+        <p>{{sportsBible.3.publishedAt}}</p>
+        <p>{{sportsBible.3.description}}</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="tech_par js--tech">
+    <h1 style="font-size: 300%">Tech</h1>
+  </section>
+
+  <section class="tech-container">
+    <div class="grid t_one">
+      <figure class="tech_box">
+        <img src="{{Crunch.0.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Crunch.0.title}}
+          </h3>
+          <p>{{Crunch.0.description}}</p>
+          <a href="{{Crunch.0.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_two">
+      <figure class="tech_box">
+        <img src="{{Recode.0.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Recode.0.title}}
+          </h3>
+          <p>{{Recode.0.description}}</p>
+          <a href="{{Recode.0.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_three">
+      <figure class="tech_box">
+        <img src="{{Crunch.1.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Crunch.1.title}}
+          </h3>
+          <p>{{Crunch.1.description}}</p>
+          <a href="{{Crunch.1.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_four">
+      <figure class="tech_box">
+        <img src="{{Recode.1.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Recode.1.title}}
+          </h3>
+          <p>{{Recode.1.description}}</p>
+          <a href="{{Recode.1.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_one">
+      <figure class="tech_box">
+        <img src="{{Crunch.2.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Crunch.2.title}}
+          </h3>
+          <p>{{Crunch.2.description}}</p>
+          <a href="{{Crunch.2.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_two">
+      <figure class="tech_box">
+        <img src="{{Recode.2.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Recode.2.title}}
+          </h3>
+          <p>{{Recode.2.description}}</p>
+          <a href="{{Recode.2.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_three">
+      <figure class="tech_box">
+        <img src="{{Crunch.3.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Crunch.3.title}}
+          </h3>
+          <p>{{Crunch.3.description}}</p>
+          <a href="{{Crunch.3.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_four">
+      <figure class="tech_box">
+        <img src="{{Recode.3.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Recode.3.title}}
+          </h3>
+          <p>{{Recode.3.description}}</p>
+          <a href="{{Recode.3.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid t_four">
+      <figure class="tech_box">
+        <img src="{{Recode.4.urlToImage}}" alt="image">
+        <figcaption>
+          <h3>{{Recode.4.title}}
+          </h3>
+          <p>{{Recode.4.description}}</p>
+          <a href="{{Recode.4.url}}" target="blank_">View More</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section-form js--subscription">
+    <i class="ion-paper-airplane icon-mail" style=" display: block; margin: auto; width: 1%;"></i>
+    {% if messages %} {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+      {{ message }}
+      </p>
+      {% endfor %} {% endif %}
+      <div class="row">
+        <h2>Get updates straight to your inbox</h2>
+      </div>
+
+      <form method="post" action="/subscribe" class="contact-form ajax_form" id="create_user_ajax_form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email </label>
+          <input type="email" name="email" id="email" placeholder="Your email" required>
+        </div>
+        <button class="form-button" type="submit" form="create_user_ajax_form" value="Submit">Submit</button>
+      </form>
+
+
+  </section>
+
+  <footer>
+    <ul class="social-links">
+      <li>
+        <a href="#">
+          <i class="ion-social-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="ion-social-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="ion-social-googleplus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="ion-social-instagram"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="row ender">
+      <p>
+        Flash News is a Kiernan & Kim production
+        <br>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{% static 'flashnews/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'flashnews/js/index.js' %}"></script>
+</body>
+
+</html>
